@@ -81,7 +81,7 @@ namespace Snake
                     }
                 }
 
-                // update position of the sanake
+                // update position of the snake
                 Position snakeHead = snake.GetPos.Last();
                 Position nextDirection = directions[direct];
 

@@ -1,109 +1,176 @@
-﻿using System;
+using System;
+using System.Linq;
+using System.Threading;
 
-namespace SnakeGame
+namespace Snake
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // start game
-            Console.WriteLine("Press any key to continue...");
-            Console.ReadKey();
+            // initialize objects
+            int CURRENTSCORE = 0;
 
-            // display this char on the console during the game
-            char ch = '*';
-            bool gameLive = true;
-            ConsoleKeyInfo consoleKey; // holds whatever key is pressed
+            byte right = 0;
+            byte left = 1;
+            byte down = 2;
+            byte up = 3;
 
-            // location info & display
-            int x = 0, y = 2; // y is 2 to allow the top row for directions & space
-            int dx = 1, dy = 0;
-            int consoleWidthLimit = 79;
-            int consoleHeightLimit = 24;
+            int lastFoodTime = 0;
+            int foodDissapearTime = 16000;
 
-            // clear to color
-            Console.BackgroundColor = ConsoleColor.DarkGray;
-            Console.Clear();
 
-            // delay to slow down the character movement so you can see it
-            int delayInMillisecs = 50;
-
-            // whether to keep trails
-            bool trail = false;
-
-            do // until escape
+            Position[] directions = new Position[]
             {
-                // print directions at top, then restore position
-                // save then restore current color
-                ConsoleColor cc = Console.ForegroundColor;
-                Console.ForegroundColor = ConsoleColor.Black;
-                Console.SetCursorPosition(0, 0);
-                Console.WriteLine("Arrows move up/down/right/left. Press 'esc' quit.");
-                Console.SetCursorPosition(x, y);
-                Console.ForegroundColor = cc;
+                new Position(0, 1), // right
+                new Position(0, -1), // left
+                new Position(1, 0), // down
+                new Position(-1, 0), // up
+            };
 
-                // see if a key has been pressed
+            Console.BufferHeight = Console.WindowHeight;
+            double sleepTime = 100;
+            lastFoodTime = Environment.TickCount;
+
+            // Initialize the obstacle and draw the obstacles
+            Obstacle obs = new Obstacle();
+            obs.Generate_random_obstacle();
+
+            foreach (Position obstacle in obs.GetObsPos)
+            {
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.SetCursorPosition(obstacle.col, obstacle.row);
+                Console.Write("=");
+            }
+
+            // Iniatitlize the food and draw food
+            Food food = new Food();
+            food.Generate_random_food();
+
+            // Initialize the snake and draw snake
+            Snake snake = new Snake();
+            snake.DrawSnake();
+            int direct = right;
+
+            // looping
+            while (true)
+            {
+                // Set the score at the top right corner
+                Console.SetCursorPosition(Console.WindowWidth - 10, Console.WindowHeight - 30);
+                Console.WriteLine("Score: " + CURRENTSCORE);
+
+                // check whats the key is pressed
                 if (Console.KeyAvailable)
                 {
-                    // get key and use it to set options
-                    consoleKey = Console.ReadKey(true);
-                    switch (consoleKey.Key)
+                    ConsoleKeyInfo userInput = Console.ReadKey();
+                    if (userInput.Key == ConsoleKey.LeftArrow)
                     {
-                      
-                        case ConsoleKey.UpArrow: //UP
-                            dx = 0;
-                            dy = -1;
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            break;
-                        case ConsoleKey.DownArrow: // DOWN
-                            dx = 0;
-                            dy = 1;
-                            Console.ForegroundColor = ConsoleColor.Cyan;
-                            break;
-                        case ConsoleKey.LeftArrow: //LEFT
-                            dx = -1;
-                            dy = 0;
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            break;
-                        case ConsoleKey.RightArrow: //RIGHT
-                            dx = 1;
-                            dy = 0;
-                            Console.ForegroundColor = ConsoleColor.Black;
-                            break;
-                        case ConsoleKey.Escape: //END
-                            gameLive = false;
-                            break;
+                        if (direct != right) direct = left;
+                    }
+                    if (userInput.Key == ConsoleKey.RightArrow)
+                    {
+                        if (direct != left) direct = right;
+                    }
+                    if (userInput.Key == ConsoleKey.UpArrow)
+                    {
+                        if (direct != down) direct = up;
+                    }
+                    if (userInput.Key == ConsoleKey.DownArrow)
+                    {
+                        if (direct != up) direct = down;
                     }
                 }
 
-                // find the current position in the console grid & erase the character there if don't want to see the trail
-                Console.SetCursorPosition(x, y);
-                if (trail == false)
-                    Console.Write(' ');
+                // update position of the snake
+                Position snakeHead = snake.GetPos.Last();
+                Position nextDirection = directions[direct];
 
-                // calculate the new position
-                // note x set to 0 because we use the whole width, but y set to 1 because we use top row for instructions
-                x += dx;
-                if (x > consoleWidthLimit)
-                    x = 0;
-                if (x < 0)
-                    x = consoleWidthLimit;
+                Position snakeNewHead = new Position(snakeHead.row + nextDirection.row,
+                    snakeHead.col + nextDirection.col);
 
-                y += dy;
-                if (y > consoleHeightLimit)
-                    y = 2; // 2 due to top spaces used for directions
-                if (y < 2)
-                    y = consoleHeightLimit;
+                // check if the snake exceed the width or height
+                if (snakeNewHead.col < 0) snakeNewHead.col = Console.WindowWidth - 1;
+                if (snakeNewHead.row < 0) snakeNewHead.row = Console.WindowHeight - 1;
+                if (snakeNewHead.row >= Console.WindowHeight) snakeNewHead.row = 0;
+                if (snakeNewHead.col >= Console.WindowWidth) snakeNewHead.col = 0;
 
-                // write the character in the new position
-                Console.SetCursorPosition(x, y);
-                Console.Write(ch);
+                // check if the  snake collison with self or obstacles
+                if (snake.GetPos.Contains(snakeNewHead) || obs.GetObsPos.Contains(snakeNewHead))
+                {
+                    Console.SetCursorPosition(0, 0);
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Game over!");
+                    return;
+                }
 
-                // pause to allow eyeballs to keep up
-                System.Threading.Thread.Sleep(delayInMillisecs);
+                // actions for eating the food
+                if (snakeNewHead.col == food.x && snakeNewHead.row == food.y)
+                {
+                    CURRENTSCORE++;
+                    Console.SetCursorPosition(Console.WindowWidth - 10, Console.WindowHeight - 30);
+                    Console.WriteLine("Score: " + CURRENTSCORE);
+                    food = new Food();
+                    food.Generate_random_food();
+                }
+                // draw the body of the snake
+                Console.SetCursorPosition(snakeHead.col, snakeHead.row);
+                Console.ForegroundColor = ConsoleColor.DarkGray;
+                Console.Write("*");
 
-            } while (gameLive);
+                // moven=ment of the snake
+                snake.GetPos.Enqueue(snakeNewHead);
+                Console.SetCursorPosition(snakeNewHead.col, snakeNewHead.row);
+                Console.ForegroundColor = ConsoleColor.Gray;
+
+                // draw snake head
+                if (direct == right)
+                {
+                    Console.Write(">");
+                }
+                if (direct == left)
+                {
+                    Console.Write("<");
+                }
+                if (direct == up)
+                {
+                    Console.Write("^");
+                }
+                if (direct == down)
+                {
+                    Console.Write("v");
+                }
+
+                // moving...
+                Position last = snake.GetPos.Dequeue();
+                Console.SetCursorPosition(last.col, last.row);
+                Console.Write(" ");
+
+                // winning condition score = 6
+                if (CURRENTSCORE == 6)
+                {
+                    Console.Clear();
+                    Console.SetCursorPosition(Console.WindowWidth / 3+10, Console.WindowHeight / 3+2);
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine("!! Stage Clear!!");
+                    String Ending_Press = Console.ReadLine();
+                    return;
+                }
+
+                // food lasting time
+                if (Environment.TickCount - lastFoodTime >= foodDissapearTime)
+                {
+                    Console.SetCursorPosition(food.x, food.y);
+                    Console.Write(" ");
+                    food = new Food();
+                    food.Generate_random_food();
+
+                    lastFoodTime = Environment.TickCount;
+                }
+
+                sleepTime -= 0.01;
+                Thread.Sleep((int)sleepTime);
+            }
         }
     }
-    
 }
+

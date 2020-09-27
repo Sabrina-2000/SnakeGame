@@ -14,7 +14,7 @@ namespace SnakeGame
         private List<int> _x;
         private List<int> _y;
 
-        public void GenerateObstacles()
+        public void Generate_random_obstacle()
         {
             Random random = new Random();
             obstacles = new List<Position>();
@@ -31,7 +31,7 @@ namespace SnakeGame
             }
         }
 
-        public List<Position> GetObstacles
+        public List<Position> GetObsPos
         {
             get { return obstacles; }
         }

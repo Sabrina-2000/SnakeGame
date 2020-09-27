@@ -6,25 +6,23 @@ namespace SnakeGame
 {
     class Snake
     {
-        public Queue<Position> snake;
+        public Queue<Position> snakeElements;
 
         public Snake()
         {
-            snake = new Queue<Position>();
+            snakeElements = new Queue<Position>();
         }
 
         public Queue<Position> GetPos
         {
-            get { return snake; }
+            get { return snakeElements; }
         }
 
         public void DrawSnake()
         {
-            int i = 0;
-            while (i <= 5)
+            for (int i = 0; i <= 3; i++)
             {
-                snake.Enqueue(new Position(0, i));
-                i++;
+                snakeElements.Enqueue(new Position(0, i));
             }
         }
     }

@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Threading;
 
-namespace Snake
+namespace SnakeGame
 {
     class Program
     {

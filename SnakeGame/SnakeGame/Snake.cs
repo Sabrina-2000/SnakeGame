@@ -25,5 +25,10 @@ namespace SnakeGame
                 snakeElements.Enqueue(new Position(0, i));
             }
         }
+
+        public void AddSnakeLength()
+        {
+            snakeElements.Enqueue(new Position(0, 1));
+        }
     }
 }

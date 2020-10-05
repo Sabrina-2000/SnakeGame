@@ -111,6 +111,7 @@ namespace SnakeGame
                     Console.WriteLine("Score: " + CURRENTSCORE);
                     food = new Food();
                     food.Generate_random_food();
+                    snake.AddSnakeLength();
                 }
                 // draw the body of the snake
                 Console.SetCursorPosition(snakeHead.col, snakeHead.row);

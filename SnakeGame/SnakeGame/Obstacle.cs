@@ -21,7 +21,7 @@ namespace SnakeGame
             _x = new List<int>();
             _y = new List<int>();
 
-            for (int i = 1; i < 2; i++)
+            for (int i = 1; i < 6; i++)
             {
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 int x = random.Next(Console.WindowHeight);
@@ -35,5 +35,16 @@ namespace SnakeGame
         {
             get { return obstacles; }
         }
+
+        public int GetObsX()
+        {
+            var obsX = obstacles.Last();
+            return obsX.col;
+        }
+
+        public int GetObsY()
+        {
+            var obsY = obstacles.Last();
+            return obsY.row;        }
     }
 }

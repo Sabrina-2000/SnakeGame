@@ -99,11 +99,13 @@ namespace SnakeGame
                 if (snakeNewHead.col >= Console.WindowWidth) snakeNewHead.col = 0;
 
                 // check if the  snake collison with self or obstacles
-                if (snake.GetPos.Contains(snakeNewHead) || obs.GetObsPos.Contains(snakeNewHead))
+                if (snake.GetPos.Contains(snakeNewHead) || (snakeNewHead.col == obs.GetObsX()&&(snakeNewHead.row==obs.GetObsY())))
                 {
-                    Console.SetCursorPosition(0, 0);
+                    Console.Clear();
+                    Console.SetCursorPosition(Console.WindowWidth / 3 + 10, Console.WindowHeight / 3 + 2);
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Game over!");
+                    Console.WriteLine("!! Gameover !!");
+                    String Ending_Press = Console.ReadLine();
                     return;
                 }
 

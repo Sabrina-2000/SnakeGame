@@ -2,6 +2,7 @@
   "format": 1,
   "restore": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "C:\\Users\\Ah Gang\\Desktop\\DP1_Code\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj": {}
   },
   "projects": {
@@ -26,15 +27,31 @@
         "packagesPath": "C:\\Users\\WEE\\.nuget\\packages\\",
         "outputPath": "D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\obj\\",
 >>>>>>> Stashed changes
+=======
+    "D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj": {}
+  },
+  "projects": {
+    "D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj",
+        "projectName": "SnakeGame",
+        "projectPath": "D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj",
+        "packagesPath": "C:\\Users\\WEE\\.nuget\\packages\\",
+        "outputPath": "D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\obj\\",
+>>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
           "C:\\Users\\Ah Gang\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
 =======
+=======
+>>>>>>> Stashed changes
           "C:\\Users\\WEE\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"

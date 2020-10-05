@@ -1,6 +1,7 @@
 {
   "version": 2,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   "dgSpecHash": "S/yuoBoxrf1rgWpP7ZZqgTWsN6NelWxxCcgYiGYLXlQmxGy9bKPSDSFVGejXic5YcOaD+ooUS+iyqrY/81P5/g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ah Gang\\Desktop\\DP1_Code\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj",
@@ -13,6 +14,10 @@
 =======
   "dgSpecHash": "RDu4s61vax099BQCAAf6m9wOrdv5cdL57/KL6BmHoPhRDnyFL1lmFyJPQ/XdFy0zPpGS/teIv7tQFBxhapjI0g==",
   "success": true,
+=======
+  "dgSpecHash": "RDu4s61vax099BQCAAf6m9wOrdv5cdL57/KL6BmHoPhRDnyFL1lmFyJPQ/XdFy0zPpGS/teIv7tQFBxhapjI0g==",
+  "success": true,
+>>>>>>> Stashed changes
   "projectFilePath": "D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj",
   "expectedPackageFiles": [],
 >>>>>>> Stashed changes

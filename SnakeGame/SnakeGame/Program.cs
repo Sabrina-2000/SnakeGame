@@ -8,6 +8,10 @@ namespace SnakeGame
     {
         static void Main(string[] args)
         {
+            System.Media.SoundPlayer bgm = new System.Media.SoundPlayer();
+            bgm.SoundLocation = "../../../sound/bgm.wav";
+            bgm.Play();
+
             // initialize objects
             int CURRENTSCORE = 0;
 

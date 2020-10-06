@@ -186,57 +186,25 @@
     ]
   },
   "packageFolders": {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    "C:\\Users\\Ah Gang\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
-=======
-=======
->>>>>>> Stashed changes
     "C:\\Users\\WEE\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
->>>>>>> Stashed changes
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      "projectUniqueName": "C:\\Users\\Ah Gang\\Desktop\\DP1_Code\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj",
-      "projectName": "SnakeGame",
-      "projectPath": "C:\\Users\\Ah Gang\\Desktop\\DP1_Code\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj",
-      "packagesPath": "C:\\Users\\Ah Gang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ah Gang\\Desktop\\DP1_Code\\SnakeGame\\SnakeGame\\SnakeGame\\obj\\",
-=======
       "projectUniqueName": "D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj",
       "projectName": "SnakeGame",
       "projectPath": "D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj",
       "packagesPath": "C:\\Users\\WEE\\.nuget\\packages\\",
       "outputPath": "D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\obj\\",
->>>>>>> Stashed changes
-=======
-      "projectUniqueName": "D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj",
-      "projectName": "SnakeGame",
-      "projectPath": "D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj",
-      "packagesPath": "C:\\Users\\WEE\\.nuget\\packages\\",
-      "outputPath": "D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\obj\\",
->>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        "C:\\Users\\Ah Gang\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-=======
-=======
->>>>>>> Stashed changes
         "C:\\Users\\WEE\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
->>>>>>> Stashed changes
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -282,5 +250,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

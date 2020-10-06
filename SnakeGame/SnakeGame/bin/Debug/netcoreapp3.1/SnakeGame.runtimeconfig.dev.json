@@ -1,18 +1,9 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      "C:\\Users\\Ah Gang\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Ah Gang\\.nuget\\packages",
-      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-=======
-=======
->>>>>>> Stashed changes
       "C:\\Users\\WEE\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\WEE\\.nuget\\packages",
       "C:\\Microsoft\\Xamarin\\NuGet"
->>>>>>> Stashed changes
     ]
   }
 }

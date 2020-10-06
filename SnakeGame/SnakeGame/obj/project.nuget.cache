@@ -1,25 +1,20 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  "dgSpecHash": "S/yuoBoxrf1rgWpP7ZZqgTWsN6NelWxxCcgYiGYLXlQmxGy9bKPSDSFVGejXic5YcOaD+ooUS+iyqrY/81P5/g==",
+  "dgSpecHash": "q77Mm9BGMbXeRQlHS5xx9wVP5vLgG+0PnlJ37zFpICngw0oelrdw/eDnCi2Th34K2BuyD4UlSI3MMFpWVqRgYg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ah Gang\\Desktop\\DP1_Code\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Ah Gang\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
-    "C:\\Users\\Ah Gang\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "C:\\Users\\Ah Gang\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
-    "C:\\Users\\Ah Gang\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
-  ],
-=======
-  "dgSpecHash": "RDu4s61vax099BQCAAf6m9wOrdv5cdL57/KL6BmHoPhRDnyFL1lmFyJPQ/XdFy0zPpGS/teIv7tQFBxhapjI0g==",
-  "success": true,
-=======
-  "dgSpecHash": "RDu4s61vax099BQCAAf6m9wOrdv5cdL57/KL6BmHoPhRDnyFL1lmFyJPQ/XdFy0zPpGS/teIv7tQFBxhapjI0g==",
-  "success": true,
->>>>>>> Stashed changes
   "projectFilePath": "D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj",
-  "expectedPackageFiles": [],
->>>>>>> Stashed changes
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\WEE\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\WEE\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\WEE\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
+    "C:\\Users\\WEE\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

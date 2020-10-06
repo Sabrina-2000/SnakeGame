@@ -83,6 +83,10 @@ namespace SnakeGame
                     {
                         if (direct != up) direct = down;
                     }
+                    if (userInput.Key == ConsoleKey.Enter)
+                    {
+                        Environment.Exit(0);
+                    }
                 }
 
                 // update position of the snake

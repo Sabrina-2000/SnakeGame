@@ -44,7 +44,7 @@ namespace SnakeGame
             {
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.SetCursorPosition(obstacle.col, obstacle.row);
-                Console.Write("=");
+                Console.Write("||");
             }
 
             // Iniatitlize the food and draw food
@@ -108,7 +108,7 @@ namespace SnakeGame
                     Console.Clear();
                     Console.SetCursorPosition(Console.WindowWidth / 3 + 10, Console.WindowHeight / 3 + 2);
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("!! Gameover !!");
+                    Console.WriteLine("!! Gameover !!  Current Score: " + CURRENTSCORE);
                     String Ending_Press = Console.ReadLine();
                     return;
                 }

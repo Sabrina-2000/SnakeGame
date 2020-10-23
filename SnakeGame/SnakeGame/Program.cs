@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
@@ -38,13 +39,14 @@ namespace SnakeGame
 
             // Initialize the obstacle and draw the obstacles
             Obstacle obs = new Obstacle();
+            //Position obstacleList = obs.GetObsPos;
             obs.Generate_random_obstacle();
 
             foreach (Position obstacle in obs.GetObsPos)
             {
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.SetCursorPosition(obstacle.col, obstacle.row);
-                Console.Write("||");
+                Console.Write("|");
             }
 
             // Iniatitlize the food and draw food
@@ -102,16 +104,24 @@ namespace SnakeGame
                 if (snakeNewHead.row >= Console.WindowHeight) snakeNewHead.row = 0;
                 if (snakeNewHead.col >= Console.WindowWidth) snakeNewHead.col = 0;
 
+               
                 // check if the  snake collison with self or obstacles
-                if (snake.GetPos.Contains(snakeNewHead) || (snakeNewHead.col == obs.GetObsX()&&(snakeNewHead.row==obs.GetObsY())))
+                foreach(Position obstacleList in obs.GetObsPos)
                 {
-                    Console.Clear();
-                    Console.SetCursorPosition(Console.WindowWidth / 3 + 10, Console.WindowHeight / 3 + 2);
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("!! Gameover !!  Current Score: " + CURRENTSCORE);
-                    String Ending_Press = Console.ReadLine();
-                    return;
+                    if((snake.GetPos.Contains(snakeNewHead))||((snakeHead.row == obstacleList.row) && (snakeHead.col == obstacleList.col)))
+                    {
+                        Console.Clear();
+                        //onsole.WriteLine("HIT!");
+                        Console.Clear();
+                        Console.SetCursorPosition(Console.WindowWidth / 3 + 10, Console.WindowHeight / 3 + 2);
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("!! Gameover !!  Current Score: " + CURRENTSCORE);
+                        String EndingPress = Console.ReadLine();
+                        return;
+                    }
+                    
                 }
+                    
 
                 // actions for eating the food
                 if (snakeNewHead.col == food.x && snakeNewHead.row == food.y)
@@ -181,6 +191,8 @@ namespace SnakeGame
                 sleepTime -= 0.01;
                 Thread.Sleep((int)sleepTime);
             }
+           
+
         }
     }
 }

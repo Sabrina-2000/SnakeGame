@@ -12,6 +12,9 @@ namespace SnakeGame
         private List<Position> obstacles;
         private List<int> _x;
         private List<int> _y;
+        private List<int> obsX;
+        private List<int> obsY;
+
 
         public void Generate_random_obstacle()
         {
@@ -35,15 +38,26 @@ namespace SnakeGame
             get { return obstacles; }
         }
 
-        public int GetObsX()
+        public List<int> GetObsX()
         {
-            var obsX = obstacles.Last();
-            return obsX.col;
+            obsX = new List<int>() ;
+            foreach (Position obs in obstacles)
+            {
+                obsX.Add(obs.col);
+
+            }
+            return obsX;
         }
 
-        public int GetObsY()
+        public List<int> GetObsY()
         {
-            var obsY = obstacles.Last();
-            return obsY.row;        }
+            obsY = new List<int>();
+            foreach (Position obs in obstacles)
+            {
+                obsY.Add(obs.row);
+
+            }
+            return obsY;
+        }
     }
 }

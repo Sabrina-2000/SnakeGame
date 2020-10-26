@@ -292,7 +292,7 @@ namespace SnakeGame
                         {
                             Console.Clear();
                             Console.SetCursorPosition(Console.WindowWidth / 3 + 6, Console.WindowHeight / 3 + 2);
-                            Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.ForegroundColor = ConsoleColor.Yellow;
                             Console.WriteLine("!!!!!!!! Stage Clear!!!!!!!!");
                             Console.SetCursorPosition(Console.WindowWidth / 3 + 9, Console.WindowHeight / 3 + 3);
                             Console.WriteLine("Current Score: " + CURRENTSCORE);

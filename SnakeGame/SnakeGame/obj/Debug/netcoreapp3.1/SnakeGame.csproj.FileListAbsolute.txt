@@ -21,3 +21,26 @@ C:\Users\Ah Gang\Desktop\DP1_Code\SnakeGame\SnakeGame\SnakeGame\obj\Debug\netcor
 C:\Users\Ah Gang\Desktop\DP1_Code\SnakeGame\SnakeGame\SnakeGame\obj\Debug\netcoreapp3.1\SnakeGame.dll
 C:\Users\Ah Gang\Desktop\DP1_Code\SnakeGame\SnakeGame\SnakeGame\obj\Debug\netcoreapp3.1\SnakeGame.pdb
 C:\Users\Ah Gang\Desktop\DP1_Code\SnakeGame\SnakeGame\SnakeGame\obj\Debug\netcoreapp3.1\SnakeGame.genruntimeconfig.cache
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\obj\Debug\netcoreapp3.1\SnakeGame.csprojAssemblyReference.cache
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\obj\Debug\netcoreapp3.1\SnakeGame.csproj.GenerateResource.cache
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\obj\Debug\netcoreapp3.1\SnakeGame.dll
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\obj\Debug\netcoreapp3.1\SnakeGame.pdb
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\bin\Debug\netcoreapp3.1\SnakeGame.exe
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\bin\Debug\netcoreapp3.1\SnakeGame.deps.json
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\bin\Debug\netcoreapp3.1\SnakeGame.runtimeconfig.json
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\bin\Debug\netcoreapp3.1\SnakeGame.runtimeconfig.dev.json
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\bin\Debug\netcoreapp3.1\SnakeGame.dll
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\bin\Debug\netcoreapp3.1\SnakeGame.pdb
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\obj\Debug\netcoreapp3.1\SnakeGame.Properties.Resources.resources
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\obj\Debug\netcoreapp3.1\SnakeGame.AssemblyInfoInputs.cache
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\obj\Debug\netcoreapp3.1\SnakeGame.AssemblyInfo.cs
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\obj\Debug\netcoreapp3.1\SnakeGame.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\obj\Debug\netcoreapp3.1\SnakeGame.csproj.CopyComplete
+C:\Users\user\Documents\GitHub\SnakeGame\SnakeGame\SnakeGame\obj\Debug\netcoreapp3.1\SnakeGame.genruntimeconfig.cache

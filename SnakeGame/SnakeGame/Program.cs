@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using System.IO;
 
 namespace SnakeGame
 {
@@ -20,7 +21,9 @@ namespace SnakeGame
             byte up = 3;
 
             int lastFoodTime = 0;
+            int lastSpecialFoodTime = 0;
             int foodDissapearTime = 16000;
+            int specialFoodDissapearTime = 10000;
 
             bool play = false;
             bool difficulty = false;
@@ -28,6 +31,8 @@ namespace SnakeGame
             bool help = false;
             bool welcome = true;
             Console.BackgroundColor = ConsoleColor.DarkGray;
+
+            var path = "../../../text/score.txt";
 
             while (true)
             {
@@ -111,6 +116,28 @@ namespace SnakeGame
                     }
                 }
 
+                while(scoreBoard == true)
+                {
+                    Console.WriteLine("##### SCORE BOARD #####");
+                    using (StreamReader file = new StreamReader(path))
+                    {
+                        string ln;
+                        while ((ln = file.ReadLine()) != null)
+                        {
+                            Console.WriteLine(ln);
+                        }
+                    }
+                    Console.WriteLine("Press ESC to back to menu");
+                    ConsoleKeyInfo scoreKey = Console.ReadKey();
+                    if(scoreKey.Key == ConsoleKey.Escape)
+                    {
+                        welcome = true;
+                        scoreBoard = false;
+                        break;
+                    }
+
+                }
+
                 if (play == true)
                 {
                     Console.BackgroundColor = ConsoleColor.DarkGray;
@@ -143,7 +170,7 @@ namespace SnakeGame
                         Console.Write("[");
                     }
 
-                    // Iniatitlize the food and draw food
+                    // Iniatialize the food and draw food
                     Food food = new Food();
                     food.Generate_random_food();
 
@@ -152,8 +179,9 @@ namespace SnakeGame
                     snake.DrawSnake();
                     int direct = right;
 
-
-
+                    //Initialize the special food and draw it
+                    SpecialFood specialFood = new SpecialFood();
+                    specialFood.Generate_random_food();
 
                     // looping
                     while (play == true)
@@ -207,6 +235,9 @@ namespace SnakeGame
                         {
                             if ((snake.GetPos.Contains(snakeNewHead)) || ((snakeHead.row == obstacleList.row) && (snakeHead.col == obstacleList.col)))
                             {
+                                StreamWriter sw = File.AppendText(path);
+                                sw.WriteLine("Score: " + CURRENTSCORE.ToString());
+                                sw.Close();
                                 Console.Clear();
                                 //onsole.WriteLine("HIT!");
                                 Console.Clear();
@@ -254,6 +285,21 @@ namespace SnakeGame
                             food.Generate_random_food();
                             snake.IncreaseSnakeLength();
                         }
+                        // actions for eating the special food
+                        if (snakeNewHead.col == specialFood.x && snakeNewHead.row == specialFood.y)
+                        {
+                            System.Media.SoundPlayer coin = new System.Media.SoundPlayer();
+                            coin.SoundLocation = "../../../sound/coin.wav";
+                            coin.Play();
+
+                            CURRENTSCORE = CURRENTSCORE + 2;
+                            Console.SetCursorPosition(Console.WindowWidth - 10, Console.WindowHeight - 30);
+                            Console.WriteLine("Score: " + CURRENTSCORE);
+                            specialFood = new SpecialFood();
+                            specialFood.Generate_random_food();
+                            snake.IncreaseSnakeLengthSpecial();
+                        }
+
                         // draw the body of the snake
                         Console.SetCursorPosition(snakeHead.col, snakeHead.row);
                         Console.ForegroundColor = ConsoleColor.Yellow;
@@ -287,9 +333,12 @@ namespace SnakeGame
                         Console.SetCursorPosition(last.col, last.row);
                         Console.Write(" ");
 
-                        // winning condition score = 6
-                        if (CURRENTSCORE == 6)
+                        // winning condition score >= 6
+                        if (CURRENTSCORE >= 6)
                         {
+                            StreamWriter sw = File.AppendText(path);
+                            sw.WriteLine("Score: " + CURRENTSCORE.ToString());
+                            sw.Close();
                             Console.Clear();
                             Console.SetCursorPosition(Console.WindowWidth / 3 + 6, Console.WindowHeight / 3 + 2);
                             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -316,7 +365,6 @@ namespace SnakeGame
                             {
                                 Console.WriteLine("Wrong Input");
                             }
-                         
                         }
 
                         // food lasting time
@@ -328,6 +376,17 @@ namespace SnakeGame
                             food.Generate_random_food();
 
                             lastFoodTime = Environment.TickCount;
+                        }
+
+                        // food lasting time
+                        if (Environment.TickCount - lastSpecialFoodTime >= specialFoodDissapearTime)
+                        {
+                            Console.SetCursorPosition(specialFood.x, specialFood.y);
+                            Console.Write(" ");
+                            specialFood = new SpecialFood();
+                            specialFood.Generate_random_food();
+
+                            lastSpecialFoodTime = Environment.TickCount;
                         }
 
                         sleepTime -= 0.01;

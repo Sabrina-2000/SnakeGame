@@ -51,9 +51,9 @@ namespace SnakeGame
                     Console.SetCursorPosition(Console.WindowWidth / 3 + 10, Console.WindowHeight / 3 + 3);
                     Console.WriteLine("Please Select the Action below");
                     Console.SetCursorPosition(Console.WindowWidth / 3 + 10, Console.WindowHeight / 3 + 4);
-                    Console.WriteLine("1. Play");
+                    Console.WriteLine("1. Play --Easy mode--");
                     Console.SetCursorPosition(Console.WindowWidth / 3 + 10, Console.WindowHeight / 3 + 5);
-                    Console.WriteLine("2. Select Difficulty");
+                    Console.WriteLine("2. Hard Mode");
                     Console.SetCursorPosition(Console.WindowWidth / 3 + 10, Console.WindowHeight / 3 + 6);
                     Console.WriteLine("3. Score Board");
                     Console.SetCursorPosition(Console.WindowWidth / 3 + 10, Console.WindowHeight / 3 + 7);
@@ -138,7 +138,7 @@ namespace SnakeGame
 
                 }
 
-                if (play == true)
+                if (play == true || difficulty == true)
                 {
                     Console.BackgroundColor = ConsoleColor.DarkGray;
                     System.Media.SoundPlayer bgm = new System.Media.SoundPlayer();
@@ -184,12 +184,14 @@ namespace SnakeGame
                     specialFood.Generate_random_food();
 
                     // looping
-                    while (play == true)
+                    while (play == true || difficulty==true)
                     {
                         // Set the score at the top right corner
                         Console.SetCursorPosition(Console.WindowWidth - 10, Console.WindowHeight - 30);
                         Console.WriteLine("Score: " + CURRENTSCORE);
 
+                        
+                        
                         // check whats the key is pressed
                         if (Console.KeyAvailable)
                         {
@@ -388,8 +390,12 @@ namespace SnakeGame
 
                             lastSpecialFoodTime = Environment.TickCount;
                         }
+                        if (play == true)
+                        { sleepTime -= 0.01; }
 
-                        sleepTime -= 0.01;
+                        if (difficulty == true)
+                        { sleepTime = 20;}
+                        
                         Thread.Sleep((int)sleepTime);
                     }
 

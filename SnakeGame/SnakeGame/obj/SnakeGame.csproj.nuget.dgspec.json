@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj": {}
+    "C:\\Users\\user\\Documents\\GitHub\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj": {}
   },
   "projects": {
-    "D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj": {
+    "C:\\Users\\user\\Documents\\GitHub\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Documents\\GitHub\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj",
         "projectName": "SnakeGame",
-        "projectPath": "D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj",
-        "packagesPath": "C:\\Users\\WEE\\.nuget\\packages\\",
-        "outputPath": "D:\\Github Clone\\SnakeGame\\SnakeGame\\SnakeGame\\obj\\",
+        "projectPath": "C:\\Users\\user\\Documents\\GitHub\\SnakeGame\\SnakeGame\\SnakeGame\\SnakeGame.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Documents\\GitHub\\SnakeGame\\SnakeGame\\SnakeGame\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\WEE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -62,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

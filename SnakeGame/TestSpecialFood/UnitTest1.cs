@@ -29,5 +29,13 @@ namespace Test
             Assert.AreEqual(3, p.GetRow);
 
         }
+
+        [TestMethod]
+        public void obstacle_Count_TEST()
+        {
+            Obstacle o = new Obstacle();
+            o.AddObstacle();
+            Assert.AreEqual(5, o.GetCount());
+        }
     }
 }

@@ -7,19 +7,17 @@ using System.Threading;
 
 namespace SnakeGame
 {
-    class Obstacle
+    public class Obstacle
     {
-        private List<Position> obstacles;
+        private List<Position> obstacles = new List<Position>();
         private List<int> _x;
         private List<int> _y;
         private List<int> obsX;
         private List<int> obsY;
 
-
         public void Generate_random_obstacle()
         {
             Random random = new Random();
-            obstacles = new List<Position>();
             _x = new List<int>();
             _y = new List<int>();
 
@@ -31,6 +29,23 @@ namespace SnakeGame
                 Position positions = new Position(x, y);
                 obstacles.Add(positions);
             }
+        }
+
+        List<Position> obsList = new List<Position>();
+
+        public void AddObstacle()
+        {
+            for(int i = 0; i < 5; i++)
+            {
+                int x = 10;
+                int y = 9 + i;
+                obsList.Add(new Position(x, y));
+            }
+        }
+
+        public int GetCount()
+        {
+            return obsList.Count();
         }
 
         public List<Position> GetObsPos

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SnakeGame
 {
-    class Snake
+    public class Snake
     {
         public Queue<Position> snakeElements;
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SnakeGame
 {
-    class Position
+    public class Position
     {
         public int row;
         public int col;

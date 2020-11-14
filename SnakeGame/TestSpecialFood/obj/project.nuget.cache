@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EBW1BstKv4S7RNf48C6sC97lz+X3FARNsnHcZSrKfZ0ARpAYPk0oXYY/5C1g7MyHBdJlQTWYFbG+P+K++zd/aw==",
+  "dgSpecHash": "h9HymzIf2BG1kAJ26GX8f59ckkIWm0tR6tNQI3fPOpK9qFpW6u8wn+23v+7eaAWeyrvNMobaoB7QZYIr2dMlzA==",
   "success": true,
-  "projectFilePath": "D:\\Github Clone\\SnakeGame\\SnakeGame\\TestSpecialFood\\TestSpecialFood.csproj",
+  "projectFilePath": "D:\\Github Clone\\SnakeGame\\SnakeGame\\TestSpecialFood\\Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WEE\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\WEE\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",

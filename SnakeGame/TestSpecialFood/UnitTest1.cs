@@ -3,7 +3,7 @@ using SnakeGame;
 using System;
 
 
-namespace TestSpecialFood
+namespace Test
 {
     [TestClass]
     public class UnitTest1

@@ -5891,9 +5891,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Github Clone\\SnakeGame\\SnakeGame\\TestSpecialFood\\TestSpecialFood.csproj",
-      "projectName": "TestSpecialFood",
-      "projectPath": "D:\\Github Clone\\SnakeGame\\SnakeGame\\TestSpecialFood\\TestSpecialFood.csproj",
+      "projectUniqueName": "D:\\Github Clone\\SnakeGame\\SnakeGame\\TestSpecialFood\\Test.csproj",
+      "projectName": "Test",
+      "projectPath": "D:\\Github Clone\\SnakeGame\\SnakeGame\\TestSpecialFood\\Test.csproj",
       "packagesPath": "C:\\Users\\WEE\\.nuget\\packages\\",
       "outputPath": "D:\\Github Clone\\SnakeGame\\SnakeGame\\TestSpecialFood\\obj\\",
       "projectStyle": "PackageReference",

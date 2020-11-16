@@ -42,11 +42,10 @@ namespace Test
         public void food_Position_TEST()
         {
             Food f = new Food();
-            f.Generate_random_food();
             f.x = 5;
             f.y = 5;
             Assert.AreEqual(5, f.getFoodRow());
-            Assert.AreEqual(5, f.getFoodRow());
+            Assert.AreEqual(5, f.getFoodCol());
         }
 
     }

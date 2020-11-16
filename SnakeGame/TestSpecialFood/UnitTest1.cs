@@ -6,7 +6,7 @@ using System;
 namespace Test
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTest1s
     {
        
         [TestMethod]
@@ -37,5 +37,17 @@ namespace Test
             o.AddObstacle();
             Assert.AreEqual(5, o.GetCount());
         }
+
+        [TestMethod]
+        public void food_Position_TEST()
+        {
+            Food f = new Food();
+            f.Generate_random_food();
+            f.x = 5;
+            f.y = 5;
+            Assert.AreEqual(5, f.getFoodRow());
+            Assert.AreEqual(5, f.getFoodRow());
+        }
+
     }
 }
